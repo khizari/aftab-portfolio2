@@ -1,0 +1,67 @@
+.projects-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.projects-intro {
+  color: var(--ink2);
+  font-size: 0.95rem;
+  max-width: 520px;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.proj-full-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.proj-full-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg);
+  /* This transition makes the hover movement look smooth instead of jumping instantly */
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+/* This is the simple hover animation effect */
+.proj-full-card:hover {
+  border-color: var(--accent); /* Changes the border color on hover */
+  transform: translateY(-5px); /* Moves the card up by 5 pixels */
+}
+
+.proj-thumb-area {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg2);
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+
+.proj-emoji {
+  font-size: 2.5rem;
+}
+
+.proj-stack-label {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--ink3);
+}
+
+.proj-card-body {
+  padding: 1.1rem 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .projects-wrap {
+    padding: 3.5rem 1.25rem;
+  }
+}

@@ -1,0 +1,139 @@
+/* ── RESET ── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── VARIABLES ── */
+:root {
+  --bg: #faf9f7;
+  --bg2: #f3f1ee;
+  --ink: #1a1917;
+  --ink2: #5c5a56;
+  --ink3: #9b9891;
+  --line: #e2dfd9;
+  --accent: #c0392b;
+  --green: #16a34a;
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Lora', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* ── BASE ── */
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ── SHARED BUTTONS ── */
+.btn-dark {
+  background: var(--ink);
+  color: var(--bg);
+  border: none;
+  padding: 0.65rem 1.4rem;
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-dark:hover {
+  opacity: 0.8;
+}
+
+.btn-ghost {
+  background: none;
+  color: var(--ink);
+  border: 1.5px solid var(--line);
+  padding: 0.65rem 1.4rem;
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  border-color: var(--ink2);
+}
+
+/* ── PAGE ANIMATION ── */
+.page-enter {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ── SECTION HEADING ── */
+.section-heading {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 1.25rem;
+}
+
+/* ── PROJECT TAGS ── */
+.proj-stack {
+  display: flex;
+  gap: 5px;
+}
+
+.proj-tag {
+  font-size: 0.68rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.t-react {
+  background: whitesmoke;
+  color: blue;
+}
+
+.t-js {
+  background: whitesmoke;
+  color: brown;
+}
+
+.t-css {
+  background: whitesmoke;
+  color: red;
+}
+
+.t-api {
+  background: whitesmoke;
+  color: green;
+}
+
+/* ── FOOTER ── */
+.footer {
+  border-top: 1px solid var(--line);
+  padding: 1.75rem 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--ink3);
+}
+
+.footer span {
+  color: var(--accent);
+  font-family: var(--font-serif);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .section-heading {
+    font-size: 1.1rem;
+  }
+}
